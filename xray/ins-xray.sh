@@ -72,8 +72,8 @@ touch /var/log/xray/errorvme.log
 touch /var/log/xray/access2.log
 touch /var/log/xray/error2.log
 # / / Ambil Xray Core Version Terbaru
-latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $latest_version
+xray_version="1.8.24"
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $xray_version
 
 ## crt xray
 systemctl stop nginx
