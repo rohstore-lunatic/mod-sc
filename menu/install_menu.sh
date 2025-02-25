@@ -1,19 +1,27 @@
 #!/bin/bash
 
- Mengunduh dan mengekstrak menu.zip
-apt update -y
-apt install -y unzip
+# Menginstall menu
 
-    wget https://raw.githubusercontent.com/kanggacorvpn/vipscripts/main/menu/LunatiX_sh
-    unzip LunatiX_sh
-    chmod +x menu/*
-    mv menu/* /usr/local/sbin
-    rm -rf menu
-    rm -rf LunatiX_sh
-    
-    wget https://raw.githubusercontent.com/kanggacorvpn/vipscripts/main/menu/LunatiX_py
-    unzip LunatiX_py
-    chmod +x menu/*
-    mv menu/* /usr/bin
-    rm -rf menu
-    rm -rf LunatiX_py    
+# Mengunduh paket yg dibutuhkan
+apt update
+apt install git -y
+
+# Install menu lunatix-sh
+git clone https://github.com/rohstore-lunatic/lunatix-sh.git
+cd lunatix-sh
+cd menu
+chmod +x ./*
+mv ./* /usr/local/sbin
+cd ..
+cd ..
+rm -rf lunatix-sh
+
+# Install menu lunatix-py   
+git clone https://github.com/rohstore-lunatic/lunatix-py.git
+cd lunatix-py
+cd menu
+chmod +x ./*
+mv ./* /usr/local/sbin
+cd ..
+cd ..
+rm -rf lunatix-py
