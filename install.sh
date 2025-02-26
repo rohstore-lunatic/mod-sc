@@ -180,7 +180,7 @@ MakeDirectories
 
 
 function domain_setup(){
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/domains.sh && chmod +x domains.sh && ./domains.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/domains.sh && chmod +x domains.sh && ./domains.sh
 clear
 }
 
