@@ -231,9 +231,9 @@ animation_loading() {
 
 TOOLS_PKG() {
 cd
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/PACKAGES/tools.sh && chmod +x tools.sh && ./tools.sh &> /dev/null
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/PACKAGES/tools.sh && chmod +x tools.sh && ./tools.sh &> /dev/null
 
-wget -q -O /etc/port.txt "https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/PACKAGES/port.txt"
+wget -q -O /etc/port.txt "https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/PACKAGES/port.txt"
 
 clear
 start=$(date +%s)
@@ -247,7 +247,7 @@ INSTALL_SSH() {
 # install at untuk meng kill triall ssh
 sudo apt install at -y >/dev/null 2>&1
 
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 
 # installer gotop
 gotop_latest="$(curl -s https://api.github.com/repos/xxxserxxx/gotop/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
@@ -261,15 +261,15 @@ clear
 INSTALL_XRAY() {
 
 # install semua kebutuhan xray
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 
 # limit quota & service xray
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/Xbw_LIMIT/install.sh && chmod +x install.sh && ./install.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/Xbw_LIMIT/install.sh && chmod +x install.sh && ./install.sh
 clear
 
 # limit service ip xray
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/AUTOKILL_SERVICE/service.sh && chmod +x service.sh && ./service.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/AUTOKILL_SERVICE/service.sh && chmod +x service.sh && ./service.sh
 clear
 
 }
@@ -277,11 +277,11 @@ clear
 INSTALL_WEBSOCKET() {
 
 # install-ws
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/ws/install-ws.sh && chmod +x install-ws.sh && ./install-ws.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/ws/install-ws.sh && chmod +x install-ws.sh && ./install-ws.sh
 clear
 
 # banner ssh
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/ws/banner_ssh.sh && chmod +x banner_ssh.sh && ./banner_ssh.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/ws/banner_ssh.sh && chmod +x banner_ssh.sh && ./banner_ssh.sh
 clear
 }
 
@@ -300,17 +300,17 @@ rm -f /root/limit.sh
 }
 
 INSTALL_OHP() {
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/ws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/ws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
 }
 
 INSTALL_FEATURE() {
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/menu/install_menu.sh && chmod +x install_menu.sh && ./install_menu.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/menu/install_menu.sh && chmod +x install_menu.sh && ./install_menu.sh
 clear
 }
 
 INSTALL_UDP_CUSTOM() {
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/ws/UDP.sh && chmod +x UDP.sh && ./UDP.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/ws/UDP.sh && chmod +x UDP.sh && ./UDP.sh
 clear
 }
 
@@ -451,7 +451,7 @@ fi
 sysctl -p >/dev/null 2>&1
 
 function install_crond(){
-wget https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/install_cron.sh && chmod +x install_cron.sh && ./install_cron.sh
+wget https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/install_cron.sh && chmod +x install_cron.sh && ./install_cron.sh
 clear
 }
 
@@ -478,7 +478,7 @@ if [ -f "/etc/afak.conf" ]; then
 rm /etc/afak.conf > /dev/null 2>&1
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/ianlunatixxx/ubdeb10_20_/main/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/rohstore-lunatic/mod-sc/main/versi  )
 echo $serverV > /root/.versi
 echo "00" > /home/daily_reboot
 aureb=$(cat /home/daily_reboot)
